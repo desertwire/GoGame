@@ -16,13 +16,13 @@ go build
 ## Checklist
 
 - [x] Hello World
-- [ ] Values
+- [x] Values
 - [x] Variables
-- [ ] Constants
-- [ ] For
-- [ ] If/Else
-- [ ] Switch
-- [ ] Arrays
+- [x] Constants
+- [x] For
+- [x] If/Else
+- [x] Switch
+- [x] Arrays
 - [ ] Slices
 - [ ] Maps
 - [ ] Range
@@ -90,5 +90,9 @@ go build
 - [ ] Exec'ing Processes
 - [ ] Signals
 - [ ] Exit
+
+## Resources
+[Go By Example](https://gobyexample.com/) 
+[Writing Go Packages](https://golang.org/doc/code.html#ImportingLocal)
 
 
