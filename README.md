@@ -4,7 +4,7 @@
 
 ## About
 
-A repository dedicated towards learning GoLang Syntax by making simple terminal based game. The idea is to apply concepts learned from Go By Example into a the game instead of just copying the examples and trying to learn from them. Below is a checklist of concepts that have been used in the game.
+A repository dedicated towards learning GoLang Syntax by making simple terminal based game. The idea is to apply concepts learned from Go By Example into a the game instead of just copying the examples and trying to learn from them. Below is a checklist of concepts that have been used in the game. 
 
 ## Build
 
@@ -89,7 +89,7 @@ go build
 - [ ] Spawning Processes
 - [ ] Exec'ing Processes
 - [ ] Signals
-- [ ] Exit
+- [X] Exit
 
 ## Resources
 [Go By Example](https://gobyexample.com/) 

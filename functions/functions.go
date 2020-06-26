@@ -13,6 +13,15 @@ func Demo() {
     fmt.Println("Second Package Works!")
 }
 
+func FirstBossMenu() {
+	println("=======================")
+	println(" 1. Attack")
+	println(" 2. Defend")
+	println(" 3. Run")
+	println("-1. Exit")
+	println("=======================")
+}
+
 func Menu() {
 	println("=======================")
 	println(" 1. Attack")

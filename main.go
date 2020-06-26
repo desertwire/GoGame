@@ -31,13 +31,15 @@ var bossesDefeated [5]int
 //String Buffer Reader
 var reader = bufio.NewReader(os.Stdin)
 
+var currentPlayer = player{name: "", level: 0, attack: 0, defense: 0}
+	//_ = currentPlayer
+
 func initializeLevels() {
 	println("What is " + "your name?")
 	playerName, _ := reader.ReadString('\n')
 	printf("Your new name is %s\n",  playerName)
-	currentPlayer := player{name: playerName, level: 0, attack: 0, defense: 0}
-	_ = currentPlayer
 	//printf("Current Player Struct:\n %+v\n", currentPlayer)
+	currentPlayer.name = playerName
 }
 
 func levelUp(p player) {
@@ -66,12 +68,20 @@ func main() {
 		switch i {
 		case 1:
 			fmt.Println("You choose to fight the space boss")
+			functions.FirstBossMenu()
+			if currentPlayer.level > 1 {
+				println("Boss Defeated")
+			} else {
+				println("You've been defeated")
+				os.Exit(3)
+			}
 		case 2:
 			fmt.Println("You decide to flee")
 		case 3:
 			fmt.Println("three")
 		default: 
 			println("Quitting the Game")
+			os.Exit(3)
 			break
 		}	
 		numberOfTerms++ // repeated forever
