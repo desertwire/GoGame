@@ -1,4 +1,4 @@
-package functions
+package textfunctions
 
 import "fmt"
 
@@ -24,9 +24,18 @@ func FirstBossMenu() {
 
 func Menu() {
 	println("=======================")
-	println(" 1. Attack")
-	println(" 2. Defend")
-	println(" 3. Bag")
+	println(" 1. Map")
+	println(" 2. Bag")
+	println(" 3. Check Stats")
+	println("-1. Exit")
+	println("=======================")
+}
+
+func Map() {
+	println("=======================")
+	println(" 1. Arch Park")
+	println(" 2. Thinkpad Cave")
+	println(" 3. Gentoo Labs")
 	println("-1. Exit")
 	println("=======================")
 }

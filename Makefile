@@ -7,6 +7,8 @@ build:
 run:
 	go run main.go 
 
+clean:
+	go clean -i
 
 compile:
 	echo "Compiling for every OS and Platform"

@@ -70,7 +70,7 @@ go build
 - [ ] Random Numbers
 - [ ] Number Parsing
 - [ ] URL Parsing
-- [ ] SHA1 Hashes
+- [X] SHA1 Hashes
 - [ ] Base64 Encoding
 - [ ] Reading Files
 - [ ] Writing Files
