@@ -4,3 +4,7 @@ import (
 	"fmt"
 	"../crypto"
 )
+
+func main() {
+	
+}

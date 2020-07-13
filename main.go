@@ -8,15 +8,9 @@ import (
 //"time"
 "./structs"
 "./textfunctions"
-"./crypto"
+"./functions"
+//"./crypto"
 )
-
-type player struct {
-    name 	string
-	level   int
-	attack  int
-	defense int
-}
 
 //Alias for shorter print function name
 var print   = 	fmt.Print
@@ -33,19 +27,13 @@ var bossesDefeated [5]int
 //String Buffer Reader
 var reader = bufio.NewReader(os.Stdin)
 
-var currentPlayer = player{name: "", level: 0, attack: 0, defense: 0}
-
-//Import struct from another package
-var testplayer = structs.Player{Name: "", Level: 0, Attack: 0, Defense: 0}
-
 func initializeLevels() {
 	println("What is " + "your name?")
 	playerName, _ := reader.ReadString('\n')
-	printf("Your new name is %s\n",  playerName)
-	//printf("Current Player Struct:\n %+v\n", currentPlayer)
-	currentPlayer.name = playerName
+	structs.MainPlayer.Name = playerName
 }
 
+/*
 func levelUp(p player) {
 	println("You have leveled up.")
 	printf("You're current level is: %d\n", p.level)
@@ -59,39 +47,32 @@ func increaseAttack(p player) {
 func increaseDefense(p player) {
 	p.defense += 1
 }
+*/
 
 func main() {
-	crypto.Sha1Checksum("Test")
 	textfunctions.Startup()
 	initializeLevels()
 	numberOfTerms := 0
 	for {
-
-		textfunctions.Menu()
+		textfunctions.Menu()	
 		var i int
-		fmt.Scanf("%d", &i)
-		println(i)
-		textfunctions.FirstBoss()
 		fmt.Scanf("%d", &i)
 		switch i {
 		case 1:
-			println("You choose to fight the space boss")
-			textfunctions.FirstBossMenu()
-			if currentPlayer.level > 1 {
-				println("Boss Defeated")
-			} else {
-				println("You've been defeated")
-				os.Exit(3)
-			}
+			println("Opening Map")
+			textfunctions.Map()
 		case 2:
-			println("You decide to flee")
+			println("You have opened bag")
 		case 3:
-			fmt.Println("three")
+			println("Checking Stats")
+			print("\n")
+			println(functions.ParsePlayerStruct(structs.MainPlayer))
 		default: 
 			println("Quitting the Game")
 			os.Exit(3)
 			break
+		print("\n")
 		}	
 		numberOfTerms++ // repeated forever
-		}
 	}
+}
