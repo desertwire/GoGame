@@ -31,7 +31,7 @@ go build
 - [ ] Variadic Functions
 - [ ] Closures
 - [ ] Recursion
-- [ ] Pointers
+- [X] Pointers
 - [x] Structs
 - [ ] Methods
 - [ ] Interfaces
@@ -67,7 +67,7 @@ go build
 - [ ] Time
 - [ ] Epoch
 - [ ] Time Formatting / Parsing
-- [ ] Random Numbers
+- [X] Random Numbers
 - [ ] Number Parsing
 - [ ] URL Parsing
 - [X] SHA1 Hashes
